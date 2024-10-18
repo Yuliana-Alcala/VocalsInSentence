@@ -17,12 +17,14 @@ function searchVocals(){
     phrase = inputDom.value
     const vocals = ['a','e','i','o','u'];
     let newArrayPhrase = [];
-    for (index = 0; index < phrase.length; index++) {
+    
+    for (let index = 0; index < phrase.length; index++) {
         
         if (vocals.includes(phrase[index]))
-        {
-            newArrayPhrase += phrase[index];            
+        {   
+            newArrayPhrase.push(phrase[index]);         
         }
     }
-    divDom.innerHTML = "La frase contiene las siguientes vocales: " + newArrayPhrase
+    divDom.innerHTML = "La frase contiene las siguientes vocales: " + JSON.stringify(newArrayPhrase)
+    
 }
