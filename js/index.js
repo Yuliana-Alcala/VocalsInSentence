@@ -1,13 +1,28 @@
 let inputDom = document.getElementById("inputId");
-let btnDom = document.getElementById("btnId");
+let btnShowDom = document.getElementById("btnShowId");
 let divDom = document.getElementById("divId");
+let btnSearchDom = document.getElementById("btnSearchId");
 
-btnDom.addEventListener("click", getSentence);
+btnShowDom.addEventListener("click", getSentence);
+btnSearchDom.addEventListener("click", searchVocals);
 
 
-function getSentence() {
-    div = divDom
+function getSentence() {    
     phrase = inputDom.value
-    div.innerHTML = "La frase es: " + phrase
+    divDom.innerHTML = "La frase es: " + phrase
 }
 
+
+function searchVocals(){
+    phrase = inputDom.value
+    const vocals = ['a','e','i','o','u'];
+    let newArrayPhrase = [];
+    for (index = 0; index < phrase.length; index++) {
+        
+        if (vocals.includes(phrase[index]))
+        {
+            newArrayPhrase += phrase[index];            
+        }
+    }
+    divDom.innerHTML = "La frase contiene las siguientes vocales: " + newArrayPhrase
+}
