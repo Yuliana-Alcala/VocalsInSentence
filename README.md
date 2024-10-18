@@ -33,7 +33,7 @@ El archivo de javascript deberá tener 4 funciones: getSentence(sentence), searc
   </a>
 </p>
 
-## [Acceso al Github page](#https://yuliana-alcala.github.io/VocalsInSentence/)
-## [Acceso al repositorio](#https://github.com/Yuliana-Alcala/VocalsInSentence)
+## [Acceso al Github page](https://yuliana-alcala.github.io/VocalsInSentence/)
+## [Acceso al repositorio](https://github.com/Yuliana-Alcala/VocalsInSentence)
 
 ## Autor: Yuliana Alcalá
