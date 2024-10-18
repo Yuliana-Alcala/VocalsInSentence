@@ -12,7 +12,7 @@ btnGetVocalsDom.addEventListener("click",  getVocals);
 
 function getSentence() {    
     phrase = inputDom.value
-    divDom.innerHTML = "La frase es: " + phrase
+    divDom.innerHTML = "<h2>La frase es: " + phrase + "</h2>";
 }
 
 
@@ -29,7 +29,9 @@ function searchVocals(){
         }
     }
     let uniqueVowels = [...new Set(newArrayPhrase)];
-    divDom.innerHTML = "La frase contiene las siguientes vocales: " + JSON.stringify(uniqueVowels)
+    
+
+    divDom.innerHTML = "<h2>La frase contiene las siguientes vocales: " + JSON.stringify(uniqueVowels)+"</h2>";
     
 }
 
@@ -40,12 +42,16 @@ function deleteDuplicity(){
     
     for (let index = 0; index < phrase.length; index++) {        
         if (vocals.includes(phrase[index]))
-        {  
-            newArrayPhrase.push(phrase[index]);    
-              
+        {   
+            if (!newArrayPhrase.includes(phrase[index]))
+                newArrayPhrase.push(phrase[index]);    
+               
         }
-    }    
-    divDom.innerHTML = "La frase contiene las siguientes vocales: " + JSON.stringify(newArrayPhrase)
+    }
+    
+    divDom.innerHTML = "<h2>La frase contiene las siguientes vocales: " + JSON.stringify(newArrayPhrase)+"</h2>";
+   
+
 
 }
 
@@ -64,7 +70,7 @@ function getVocals(){
     let uniqueVowels = [...new Set(newArrayPhrase)];
     let phraseString = uniqueVowels.join(", ");
 
-    divDom.innerHTML = "La frase contiene las siguientes vocales: " + phraseString;
+    divDom.innerHTML = "<h2>La frase contiene las siguientes vocales: " + phraseString + "</h2>";
     console.log(typeof(phraseString))
 
 }
